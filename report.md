@@ -23,9 +23,13 @@ The following rows were missing required information:
 | "Instant Coffee (8oz)"          | 11.99       | coffee     |
 | "cold brew concentrate"         | 13.99       | Beverages  |
 
+## Data from: https://fred.stlouisfed.org/series/APU0000717311?utm_source=chatgpt.com
 ## Average Prices by Year
 2020: $4.43
 2021: $4.71
 2022: $5.89
 2023: $6.16
 2024: $6.28
+
+## Recommendations based on findings
+Assuming prices of said shop are fair. With the used of historical data of coffee. We can made the suggesstion that prices of coffee items in the shop can be raised as the yearly cost coffee has been increasing.

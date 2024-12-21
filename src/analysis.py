@@ -61,9 +61,13 @@ def main(data_path):
             report_file.write("\n\n## Good Data\n")
             report_file.write(products_df.to_markdown(index=False))
 
-            report_file.write("\n\n## Average Prices by Year\n")
+            report_file.write("\n\n## Data from: https://fred.stlouisfed.org/series/APU0000717311?utm_source=chatgpt.com")
+            report_file.write("\n## Average Prices by Year\n")
             for year, avg_price in average_prices.items():
                 report_file.write(f"{year}: ${avg_price:.2f}\n")
+
+            report_file.write("\n## Recommendations based on findings\n")
+            report_file.write("Assuming prices of said shop are fair. With the used of historical data of coffee. We can made the suggesstion that prices of coffee items in the shop can be raised as the yearly cost coffee has been increasing.")
                 
         print("Report written to 'report.md'.")
 
