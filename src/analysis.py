@@ -1,21 +1,21 @@
 import pandas as pd
 import argparse
-import os
-import csv
 
 def main(data_path):
     data = []
     bad_data = []
 
     try:
-        with open(data_path, mode='r', newline='', encoding='utf-8') as file:
-            reader = csv.reader(file)
-            header = next(reader, None) # avoid double read of header
+        with open(data_path, mode='r', encoding='utf-8') as file:
+            lines = file.readlines()  # Read all lines
 
-            for row in reader:
-                # Clean up any carriage return characters in the row
-                row = [col.replace('\r\n', '').strip() for col in row]
-                print(row)
+            # Process each line skip the header
+            for line in lines[1:]:
+                row = [col.strip() for col in line.split(',')]
+                
+                if len(row) > 0 and '\n' in row[-1]:
+                    print(f"Bad data detected: {row}")
+                    bad_data.append(row)  # Collect bad data
 
                 if len(row) >= 3:
                     if any(col == '' for col in row[:3]):  # Check for empty columns
@@ -24,7 +24,7 @@ def main(data_path):
                         data.append(row[:3])  # Append the first three columns
 
         products_df = pd.DataFrame(data, columns=['product_name', 'our_price', 'category'])
-        bad_data_df = pd.DataFrame(bad_data, columns=['product_name', 'our_price', 'category'])
+        bad_data_df = pd.DataFrame(bad_data)
 
         print(products_df.head())
 
