@@ -1,5 +1,4 @@
 # 10EQS-Evaluation
-10EQS-Evaluation
 
 # Setting Up the Virtual Environment
 
