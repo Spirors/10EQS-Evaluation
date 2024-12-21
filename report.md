@@ -22,3 +22,10 @@ The following rows were missing required information:
 | "Mint Tea (25 bags)"            | 7.49        | Beverages  |
 | "Instant Coffee (8oz)"          | 11.99       | coffee     |
 | "cold brew concentrate"         | 13.99       | Beverages  |
+
+## Average Prices by Year
+2020: $4.43
+2021: $4.71
+2022: $5.89
+2023: $6.16
+2024: $6.28
