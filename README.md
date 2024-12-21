@@ -1,7 +1,23 @@
 # 10EQS-Evaluation
 10EQS-Evaluation
 
-python -m venv venv <!-- setup venv -->
-venv\Scripts\activate <!-- activate venv -->
-pip install pandas <!-- install pandas -->
-pip install tabulate <!-- install tabulate -->
+# Setting Up the Virtual Environment
+
+1. Create a virtual environment:
+   ```bash
+   python -m venv venv  # setup venv
+   ```
+
+2. Activate the virtual environment:
+   ```bash
+   venv\Scripts\activate  # activate venv
+   ```
+
+3. Install the required packages:
+   ```bash
+   pip install pandas  # install pandas
+   ```
+
+   ```bash
+   pip install tabulate  # install tabulate
+   ```
